@@ -1,23 +1,17 @@
 function tocaSom (seletorAudio) {
-document.querySelector(seletorAudio);
+    const elemento = document.querySelector(seletorAudio);
 
-if (elemento === null) {
-    alert ('Elemento não encontrado');
-    // console.log('Elemento não encontrado');
-}
-
-if (elemento != null && elemento.localName === 'audio '){
+    if (elemento && elemento.localName === 'audio') {
         elemento.play();
     }
     else {
-        console.log('Seletor não encontrado ou elemento inválido')
+        console.log('Elemento não encontrado ou seletor inválido');
+
     }
 
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
-
-let contador = 0;
 
  for (let contador = 0; contador < listaDeTeclas.length; contador++) {
 
